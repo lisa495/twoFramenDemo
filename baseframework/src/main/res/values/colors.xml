@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorIndicatorSelected">#FFFFFFFF</color>
+    <color name="colorIndicatorUnselected">#4CFFFFFF</color>
+    <color name="waitlayer_transparentbackground">#aa000000</color>
+    <color name="background_divider">#999999</color>
+    <color name="main_divider_line">#F3F3F1</color>
+</resources>

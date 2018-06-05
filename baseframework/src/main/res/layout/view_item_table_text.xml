@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:minHeight="@dimen/px_90_to_dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/px_30_to_dp"
+        android:paddingRight="@dimen/px_30_to_dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/left_info_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textColor="#999999"
+            android:textSize="@dimen/px_24_to_dp"
+            tools:text="中国共产党" />
+        <RelativeLayout
+            android:id="@+id/rightView"
+            android:layout_marginLeft="@dimen/px_10_to_dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/right_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/px_10_to_dp"
+                />
+
+            <TextView
+                android:padding="@dimen/px_10_to_dp"
+                android:id="@+id/right_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4f525a"
+                android:textSize="@dimen/px_24_to_dp"
+                tools:text="right" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/middle_info_view"
+            android:layout_toLeftOf="@id/rightView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_30_to_dp"
+            android:layout_toRightOf="@id/left_info_view"
+            android:textColor="#4f525a"
+            android:textSize="@dimen/px_24_to_dp"
+            tools:text="right" />
+
+        <EditText
+            android:layout_toLeftOf="@id/rightView"
+            android:id="@+id/inputView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_30_to_dp"
+            android:layout_toRightOf="@id/left_info_view"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_divider_line"
+        android:visibility="gone" />
+
+</LinearLayout>

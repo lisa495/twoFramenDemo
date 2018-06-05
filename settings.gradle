@@ -1,0 +1,1 @@
+include ':app', ':netserviceframe', ':baseframework'

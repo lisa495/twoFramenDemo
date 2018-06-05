@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/px_88_to_dp">
+
+    <!-- 左按钮 -->
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="75dp"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/title_left_iv"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/title_bar_back_selector" />
+    </RelativeLayout>
+    <!-- 中按钮 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true" />
+    </LinearLayout>
+    <!-- 右按钮 -->
+
+    <RelativeLayout
+        android:id="@+id/rightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/title_right_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/title_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

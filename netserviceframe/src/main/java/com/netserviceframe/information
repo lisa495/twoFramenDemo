@@ -1,0 +1,18 @@
+
+1.封装了OkHttp的具体实现
+2.底层实现对于使用者完全透明
+3.更换具体实现，随时可以切换，不影响使用。eg:OkHttp --> volley
+
+使用方法：
+
+   网络请求都有此代理类发起。
+
+   ProxyHttpClient proxyHttpClient=new ProxyHttpClient(new OkHttpClient());
+
+   proxyHttpClient.executePost(Object tag, String url, HttpParamsList paramsModel, TaskFinishListener listener)
+
+   proxyHttpClient.executeGet(Object tag, String url, HttpParamsList paramsModel, TaskFinishListener listener)
+
+   根据业务可以重新封装一层，其中的TaskFinishListener可以具体重写，具体参见demo包下面的NetServiceCallBack
+
+

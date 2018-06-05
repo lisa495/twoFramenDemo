@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CapLineView">
+        <attr name="capWidth" format="dimension|reference" />
+        <attr name="capHeight" format="dimension|reference" />
+        <attr name="capFillColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="BezierView">
+        <!-- 圆圈颜色 -->
+        <attr name="circle_color" format="color|reference" />
+        <attr name="bWidth" format="dimension|reference" />
+        <attr name="bHeight" format="dimension|reference" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeView">
+        <attr name="textcolor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="isRepeat" format="boolean" />
+        <attr name="speed" format="integer" />
+        <attr name="startPoint" format="integer">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+        <attr name="direction" format="integer">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="table_text">
+        <!-- title设置 -->
+        <attr name="table_leftText" format="reference|string" />
+        <attr name="table_leftText_size" format="dimension" />
+        <attr name="table_leftText_color" format="color" />
+        <attr name="table_rightText" format="reference|string" />
+        <attr name="table_rightText_size" format="dimension" />
+        <attr name="table_rightText_color" format="color" />
+        <attr name="table_middleText" format="reference|string" />
+        <attr name="table_middleText_size" format="dimension" />
+        <attr name="table_middleText_color" format="color" />
+        <!-- 是否隐藏底部的横线 -->
+        <attr name="table_hideBottomLime" format="boolean" />
+        <attr name="table_maxLength" format="integer" />
+        <attr name="table_inputHint" format="reference|string" />
+        <attr name="table_inputHint_color" format="color" />
+        <attr name="table_input_size" format="dimension" />
+        <attr name="table_input_color" format="color" />
+        <attr name="table_showInputView" format="boolean" />
+        <attr name="table_item_minHeight" format="dimension" />
+        <!--输入类型,默认文本形式-->
+        <attr name="table_contentInputTypeValue" format="integer">
+            <enum name="text" value="0" />
+            <enum name="number" value="1" />
+            <enum name="numberDecimal" value="2" />
+            <enum name="phone" value="3" />
+            <enum name="password" value="4" />
+            <enum name="email" value="5" />
+        </attr>
+        <attr name="table_rightImageRes" format="reference" />
+    </declare-styleable>
+
+
+    <style name="dialog_normal" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- activity变暗 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style><!-- 底部 弹出 dialog -->
+    <style name="dialog_side" parent="@style/dialog_normal">
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/dialog_side_animation</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="dialog_side_animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_bottom</item>
+    </style>
+</resources>

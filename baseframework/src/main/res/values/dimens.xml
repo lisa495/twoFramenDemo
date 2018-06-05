@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="px_10_to_dp">5.06dp</dimen>
+    <dimen name="px_24_to_dp">12.50dp</dimen>
+    <dimen name="px_30_to_dp">15.19dp</dimen>
+    <dimen name="px_88_to_dp">49.50dp</dimen>
+    <dimen name="bezier_width">90dp</dimen>
+    <dimen name="bezier_height">60dp</dimen>
+    <dimen name="px_90_to_dp">50.62dp</dimen>
+</resources>

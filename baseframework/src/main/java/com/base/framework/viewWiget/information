@@ -1,0 +1,41 @@
+此包用于存放公用的自定义View，包括组合view
+eg:activity的标题栏
+   自动缩小字体的textView
+
+
+使用方法：
+
+   1、广告banner：ConvenientBannerView ---》直接调用起show()方法即可 ---内部图片加载用的fresco
+   2、自动缩小字体的AutoFitTextView：同正常的TextView
+   3、跑马灯MarqueeView:
+
+      <com.base.framework.viewWiget.textView.MarqueeView
+              android:id="@+id/tv_content"
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:layout_weight="1"
+              app:direction="left"
+              app:isRepeat="true"
+              app:speed="200"
+              app:startPoint="start"
+              app:textcolor="#FFFF9913"
+              app:textSize="12sp" />
+
+   4、网络图片SimpleDraweeView  使用可查找网络
+      eg:  fresco:placeholderImage="@drawable/icon_licai"
+           fresco:roundAsCircle="true"
+      等属性配置
+
+   5、loading加载：BezierView
+
+          <com.base.framework.viewWiget.loadingView.BezierView
+                      android:id="@+id/loadingView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      bezier:circle_color="#40b0ff"
+                      />
+    6、记载状态view-- BaseLoadPagerView ，可以直接继承使用，使用时候直接调用show(T t)方法，根据t的状态可显示对应状态
+
+    7、并列可切换view--TopSwitchView  暂时写死了部分属性，可扩展
+    8、可分散对齐的view TittleTextView  --有点小瑕疵。待修正
+    9、表单提交TableTextView  适用于 填写信息或者信息展示等 eg:常见登陆 注册页面
