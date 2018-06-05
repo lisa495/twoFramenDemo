@@ -1,0 +1,15 @@
+ext{
+    android=[
+            compileSdkVersion: 26,
+            flavorDimensions :"26",
+            buildToolsVersion: '27.0.3',
+            minSdkVersion: 15,
+            targetSdkVersion: 22
+    ]
+
+    dependencies=[
+            supportV7: 'com.android.support:appcompat-v7:26.1.0',
+            constraint: 'com.android.support.constraint:constraint-layout:1.1.0',
+            fresco:'com.facebook.fresco:fresco:1.5.0'
+    ]
+}

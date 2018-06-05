@@ -1,13 +1,14 @@
 apply plugin: 'com.android.library'
 
+def configInfo=rootProject.ext.android
+def library=rootProject.ext.dependencies
 android {
-    compileSdkVersion 26
 
-
+    compileSdkVersion configInfo.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 22
+        minSdkVersion configInfo.minSdkVersion
+        targetSdkVersion configInfo.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -27,9 +28,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation library.supportV7
     testImplementation 'junit:junit:4.12'
 
     implementation 'com.youth.banner:banner:1.4.9'
-    implementation 'com.facebook.fresco:fresco:1.5.0'
+    implementation library.fresco
 }
